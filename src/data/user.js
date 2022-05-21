@@ -15,5 +15,5 @@ var users=[{
 }
 ]
 
-
-module.exports=user;
+// Part 1 point 4
+module.exports=users; // edited user to users
