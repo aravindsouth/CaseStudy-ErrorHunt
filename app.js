@@ -2,6 +2,7 @@ const express = require('express');
 const path = require ('path'); 
 const cors = require('cors');
 
+const PORT = process.env.PORT || 5000
 const dotenv = require('dotenv')
 dotenv.config({path:__dirname+'/.env'});
 
@@ -66,6 +67,6 @@ app.get('/',function(req,res){
 
 
 // Part 1 point 5, nice one :)
-app.listen(5000,()=>{
-    console.log("Server Ready on 5000"); // change port no; displayed to 5000
+app.listen(PORT,()=>{
+    console.log(`Server Ready on ${PORT}`); // change port no; displayed to 5000
 });
