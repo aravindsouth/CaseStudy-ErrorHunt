@@ -9,24 +9,26 @@ dotenv.config({path:__dirname+'/.env'});
 // Part 1 point 2
 const bodyParser = require('body-parser'); // added body-parser module
 
-const nav= [
-    {
-        link:"/books",
-        title:"Books"
-    },
-    {
-        link:"/authors",
-        title:"Authors"
-    },
-    {
-        link:"/addbook",
-        title:"Add Book"
-    },
-    {
-        link:"/addauthor",
-        title:"Add Author"
-    }
-]
+// Part 2 Point 6 - moved into /public/js/nav.js
+
+// const nav= [
+//     {
+//         link:"/books",
+//         title:"Books"
+//     },
+//     {
+//         link:"/authors",
+//         title:"Authors"
+//     },
+//     {
+//         link:"/addbook",
+//         title:"Add Book"
+//     },
+//     {
+//         link:"/addauthor",
+//         title:"Add Author"
+//     }
+// ]
 
 const loginRouter = require('./src/routes/loginroute');
 const signupRouter = require('./src/routes/signuproute');
@@ -39,6 +41,9 @@ const authorsRouter = require('./src/routes/authorsroute');
 
 //Part 1 point 1
 const app = new express(); // called the express object
+
+// Part 2 point 7
+app.use(cors()); // use cors module
 
 
 app.set('views','./src/views'); 
